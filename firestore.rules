@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Estados financieros: cualquiera puede leer, solo admins pueden escribir
+    match /estados-financieros/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Colección de admins: un usuario autenticado puede leer su propio documento
+    // Solo un admin existente puede crear/eliminar otros admins
+    match /admins/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Registro de accesos: lo escribe únicamente el servidor (Admin SDK, que
+    // ignora estas reglas). Ningún cliente puede leerlo ni escribirlo directamente;
+    // los admins lo consultan a través de la API /api/admin/access-logs.
+    match /access-logs/{logId} {
+      allow read, write: if false;
+    }
+  }
+}

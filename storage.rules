@@ -1,0 +1,12 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /estados-financieros/{allPaths=**} {
+      // Cualquiera puede descargar los PDFs
+      allow read: if true;
+      // Solo admins pueden subir/eliminar archivos
+      allow write: if request.auth != null
+        && firestore.exists(/databases/(default)/documents/admins/$(request.auth.uid));
+    }
+  }
+}
