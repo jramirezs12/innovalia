@@ -43,8 +43,8 @@ export default function Navbar() {
               className="h-9 w-auto"
             />
             <span className="font-bold text-navy-900 text-lg leading-tight">
-              Fundación<br />
-              <span className="text-sm font-semibold text-slate-600">INNOVALIA</span>
+              INNOVALIA<br />
+              <span className="text-xs font-semibold text-slate-600">Centro de Innovación</span>
             </span>
           </Link>
 

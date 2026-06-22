@@ -5,9 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Fundación INNOVALIA',
+  title: 'INNOVALIA — Centro de Innovación para la Transformación Digital y el Desarrollo Tecnológico',
   description:
-    'Sitio web oficial de la Fundación INNOVALIA, centro de innovación dedicado a la investigación, el desarrollo y la innovación tecnológica (I+D+i) en TIC. Información institucional y estados financieros.',
+    'Sitio web oficial de INNOVALIA, Centro de Innovación para la Transformación Digital y el Desarrollo Tecnológico. Investigación, desarrollo e innovación tecnológica (I+D+i) en TIC, información institucional y estados financieros.',
   keywords: [
     'Fundación INNOVALIA',
     'INNOVALIA',

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -19,6 +19,7 @@ export default function Footer() {
               className="h-12 w-auto"
             />
             <p className="text-sm leading-relaxed text-slate-400">
+              Centro de Innovación para la Transformación Digital y el Desarrollo Tecnológico.
               Entidad sin ánimo de lucro dedicada a la investigación, el desarrollo y la innovación
               tecnológica (I+D+i) en TIC, impulsando la transformación digital y el emprendimiento
               mediante la cooperación entre los sectores público, privado y académico.
@@ -52,28 +53,22 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3">
-              {/* TODO: Reemplazar con datos de contacto reales */}
               <li className="flex items-start gap-2 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-gold-500" />
-                <span>Colombia</span>
+                <span>Avenida Calle 26 # 69-76, Torre 3, Of. 1501-1502, Bogotá, Colombia</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-400">
                 <Mail className="w-4 h-4 shrink-0 text-gold-500" />
-                <a href="mailto:info@innovalia.org" className="hover:text-white transition-colors">
-                  info@innovalia.org
+                <a href="mailto:administrador@innovaliacolombia.com" className="hover:text-white transition-colors">
+                  administrador@innovaliacolombia.com
                 </a>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-slate-400">
-                <Phone className="w-4 h-4 shrink-0 text-gold-500" />
-                {/* TODO: Agregar teléfono real */}
-                <span>+57 (___) ___ ____</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-navy-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
-          <p>© {year} Fundación INNOVALIA. Todos los derechos reservados.</p>
+          <p>© {year} INNOVALIA — Centro de Innovación. Todos los derechos reservados.</p>
           <Link href="/admin/login" className="hover:text-slate-300 transition-colors">
             Acceso administradores
           </Link>

@@ -9,6 +9,8 @@ import {
   Rocket,
   Landmark,
   Megaphone,
+  MapPin,
+  Mail,
   FileText,
   ChevronDown,
 } from 'lucide-react'
@@ -68,13 +70,15 @@ export default function HomePage() {
             Innovación · Tecnología · I+D+i · Colombia
           </span>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-            Fundación
-            <br />
-            <span className="text-gold-500">INNOVALIA</span>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gold-500 leading-tight mb-4">
+            INNOVALIA
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base sm:text-xl font-semibold text-white max-w-2xl mx-auto mb-6 leading-snug">
+            Centro de Innovación para la Transformación Digital y el Desarrollo Tecnológico
+          </p>
+
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
             Potenciamos el beneficio social y la competitividad empresarial a través de la
             investigación, el desarrollo y la innovación tecnológica (I+D+i) en TIC.
           </p>
@@ -231,15 +235,30 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto card text-center space-y-4">
-            <p className="text-slate-500 text-sm">Correo electrónico</p>
-            <a
-              href="mailto:info@innovalia.org"
-              className="text-navy-900 font-semibold hover:text-gold-600 transition-colors"
-            >
-              info@innovalia.org
-            </a>
-            {/* TODO: Agregar más información de contacto: dirección, teléfono, redes sociales */}
+          <div className="max-w-md mx-auto card space-y-5">
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 bg-navy-50 rounded-lg flex items-center justify-center shrink-0">
+                <MapPin className="w-5 h-5 text-navy-900" />
+              </div>
+              <div>
+                <p className="text-slate-500 text-sm">Dirección</p>
+                <p className="text-navy-900 font-semibold">Avenida Calle 26 # 69-76, Torre 3, Oficina 1501-1502, Bogotá, Colombia</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 bg-navy-50 rounded-lg flex items-center justify-center shrink-0">
+                <Mail className="w-5 h-5 text-navy-900" />
+              </div>
+              <div>
+                <p className="text-slate-500 text-sm">Correo electrónico</p>
+                <a
+                  href="mailto:administrador@innovaliacolombia.com"
+                  className="text-navy-900 font-semibold hover:text-gold-600 transition-colors"
+                >
+                  administrador@innovaliacolombia.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
